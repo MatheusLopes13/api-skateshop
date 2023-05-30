@@ -1,0 +1,226 @@
+/* CSS original da página de roupas */
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+.main {
+    justify-content: space-between;
+    display: flex;
+    margin-top: 6rem;
+}
+
+.container {
+    display: flex;
+    background-color: white;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    padding: 1rem 8rem;
+    margin-top: 64px;
+    flex-wrap: wrap;
+}
+
+/* .main {
+    width: 90%;
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+} */
+
+/* .title {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 70px;
+    margin-left: 1rem;
+    position: absolute;
+    top: 13rem;
+} */
+
+ul a {
+    color: black;
+}
+
+i {
+    color: black;
+}
+
+/* Início estilização filtro*/
+
+.filter {
+    width: 10rem;
+    height: 21rem;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(216, 215, 215);
+    border-radius: 7px;
+    letter-spacing: 2px;
+    text-align: left;
+    gap: 5px;
+    align-items: left;
+    padding: 1rem;
+}
+
+/* .filter label {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+} */
+
+/* .margin-top {
+    margin-top: 12px;
+} */
+
+/* .margin-camisas {
+    margin-left: 15px;
+} */
+
+.clean {
+    font-family: Montserrat, sans-serif;
+    font-size: .9rem;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 15px 0 15px 0;
+    border: none;
+    padding: 4px;
+    background-color: #30b3db;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+
+.tamanhos {
+    gap: 5px;
+    width: 97px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    /* margin-left: 17px; */
+}
+
+/* Fim estilização filtro*/
+
+/* estilizção roupas.css antiga */
+/* .produtos {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 3rem 0px 6rem;
+
+}
+
+.produto-individual {
+    width: 18rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.produto-individual img {
+    width: 15rem;
+    height: 15rem;
+    margin-bottom: 1.5rem;
+
+}
+
+
+.produto-individual img:hover {
+    transform: scale(1.2);
+    transition: all 0.5s;
+    cursor: pointer;
+} */
+
+.produto {
+    width: 25%;
+    /* height: 100%; */
+    margin: 7px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+}
+
+.video {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 64px;
+}
+
+
+.container img {
+    width: 15rem;
+    height: 15rem;
+    padding-bottom: 1rem;
+
+}
+
+.img-home {
+    box-shadow: 0px 0px 17px 5px grey;
+    width: 70%;
+    height: 35rem;
+    margin: 2rem auto;
+
+}
+
+
+.efeitoHover {
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+
+.produto img:hover {
+    transform: scale(1.2);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.produto-container-2 {
+    min-height: 300px;
+    width: 32%;
+}
+
+.truck img {
+    width: 13rem;
+    height: 7rem;
+    padding-bottom: 1rem;
+
+}
+
+.produto button {
+    cursor: pointer;
+    background-color: #30b3db;
+    border-radius: 4px;
+    color: white;
+    padding: 4px;
+    border: none;
+}
+
+@media (max-width: 600px) {
+
+    .produto {
+        width: 100%;
+    }
+
+    .container {
+        flex-wrap: wrap;
+    }
+
+    .img-home {
+
+        margin-left: 1rem;
+        height: auto;
+        width: 100%;
+
+    }
+
+    h3 {
+        font-size: unset;
+    }
+}

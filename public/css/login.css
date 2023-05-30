@@ -1,0 +1,112 @@
+.conecte{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    margin-top: 10rem;
+    
+}
+
+.style{
+    letter-spacing: 1rem;
+    margin-bottom: 1rem;
+    color:black;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.display-flex input {
+    width: 100%;
+    border: 1px solid gray;
+    border-radius: 0;
+    height: 2rem;
+}
+
+.buttom-black {
+    background-color: #aca6a6;
+    color: white;
+    letter-spacing: .5rem;
+    height: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.buttom-facebook {
+    background-color:#2e74dd ;
+    color: white;   
+    letter-spacing: .5rem;
+    height: 2rem;
+    border: none; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.display-flex {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.login {
+    font-size: 1.2rem;
+    letter-spacing: .5rem;
+    margin-bottom: 1rem;
+}
+
+.width-30 {
+    width: 25%;
+}
+
+.input-line {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fb-image {
+    height: 60%;
+    width: 10%;
+}
+
+ul a {
+    color: black;
+}
+
+.buttom-black:hover{
+   
+    transition: all 0.5s;
+    cursor: pointer;
+    background-color: black;
+}
+
+.buttom-facebook:hover {
+    
+    transition: all 0.5s;
+    cursor: pointer;
+    background-color: #4075c5;
+
+}
+
+.input-pesquisar {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    border-bottom: 1px solid black;
+    border-radius: 0;
+    width: 85%;
+ 
+}
+
+i{
+    color: black;
+ }
+
+ .mensagem{
+    color: red;
+    margin-top: 5px;
+    display: none;
+
+ }

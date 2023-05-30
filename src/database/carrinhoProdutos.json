@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "imagem": ["https://maze.cdn.plataformaneo.com.br/produto/multifotos/hd/20201209172622_3377996623_DZ.jpg", "https://www.estilozzo.com/wp-content/uploads/2020/12/S220_Numeric_NM1010BR_30_001.jpg", "https://i0.wp.com/sneakersbr.co/wp-content/uploads/2020/05/new-balance-numeric-101-tiago-lemos-02.jpg?resize=1080%2C1080&ssl=1"
+        ],
+        "nome": "Tiago lemos",
+        "valor": 600,
+        "cor": "preto",
+        "tamanhos": [38,39,40,42]
+    }
+   
+]

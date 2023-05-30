@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<%- include('includes/head', { linkCss: 'css/perfil.css' , title: 'Home page' }) %>
+
+   <body>
+    <% if (typeof usuario !== 'undefined') { %>
+        <%- include('includes/header' , {carrinhoProduts: carrinhoProdutos, usuario}) %>
+    <% } else { %>
+        <%- include('includes/header' , {carrinhoProduts: carrinhoProdutos}) %>
+    <% } %>
+   
+    <form class="editar-cadastro" action="/editar/perfil" method="post">
+        <p>Editar cadastro</p>
+        <p>Nome</p>
+        <input type="text" name="nome">
+        <p>Sobrenome</p>
+        <input type="text" name="sobrenome">
+        <p>Email</p>
+        <input type="email" name="email">
+        <p>Rua</p>
+        <input type="text" name="rua">
+        <p>Numero</p>
+        <input type="text" name="endereço">
+        <p>CEP</p>
+        <input type="text" name="cep">
+        <p>Nova Senha</p>
+        <input type="password" name="senhaNova">
+        <p>Confirmar senha</p>
+        <input type="password" name="confirmarSenha">
+        <button type="submit"> Salvar </button>
+        
+        
+    </form>
+   
+   
+    <%- include('includes/footer') %>            
+
+   </body>
+
+    
+</html>

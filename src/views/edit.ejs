@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<body>
+
+    <p>teste</p>
+
+    <form action="/update/<%= productToEdit.id %>?_method=PUT" method="POST"> 
+
+        <div class="product"> 
+            <div>
+                <label for="text"></label>  
+                <input value="<%= productToEdit.nome %>"  type="text" name="nome">
+            </div>
+
+            <div>
+                <label  for="text">Valor</label>  
+                <input value="<%= productToEdit.valor %>" type="text" name="valor">
+            </div>
+
+            <div>
+                <label  for="text">Tamanho</label>  
+                <input value="<%= productToEdit.tamanho %>" type="text" name="tamanho"> 
+            </div>
+
+            <div>
+                <label  for="text">Descrição</label>  
+                <input value="<%= productToEdit.descricao %>" type="text" name="descricao">
+            </div>
+
+            <div>
+                <label  for="text">Cor </label>  
+                <input value="<%= productToEdit.cor %>" type="text" name="cor">
+            </div>
+            <div>
+                <label  for="text">Imagem </label>  
+                <input type="file" name="imagem_1">
+            </div>
+            <div>
+                <label  for="text">Imagem </label>  
+                <input type="file" name="imagem_2">
+            </div>
+            <div>
+                <label  for="text">Imagem </label>  
+                <input type="file" name="imagem_3">
+            </div>
+            <div>
+                <label  for="text">Categoria</label>  
+                <input value="<%= productToEdit.id_categoria %>" type="text" name="id_categoria">
+            </div>
+            <div>
+                <label  for="text">Codigo do produto</label>  
+                <input value="<%= productToEdit.codigo_produto %>" type="text" name="codigo_produto">
+            </div>
+
+            <button type="submit">
+                editar produto
+            </button>
+           
+
+
+           
+
+</body>
+</html>

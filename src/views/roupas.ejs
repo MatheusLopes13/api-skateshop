@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<%- include('includes/head', { linkCss: 'css/roupas.css' , title: 'Roupas' }) %>
+
+<body>
+
+
+  <%- include('includes/header' , {carrinhoProduts: carrinhoProdutos}) %>
+
+    
+  <main>
+    <div class="main">
+      <div class="filter">
+        <h5 class="margin-top">FILTRO</h5>
+        <label>
+          <input type="checkbox"> Blusas
+        </label>
+        <label class="margin-camisas">
+          <input type="checkbox"> Camisas
+        </label>
+        <label>
+          <input type="checkbox"> Calças
+        </label>
+        <label>
+          <input type="checkbox"> Shorts
+        </label>
+      
+        <h5 class="margin-top">TAMANHOS</h5>
+      
+        <div class="tamanhos">
+          <label>
+            <input type="checkbox"> P
+          </label>
+          <label>
+            <input type="checkbox"> M
+          </label>
+          <label>
+            <input type="checkbox"> G
+          </label>
+          <label>
+            <input type="checkbox"> GG
+          </label>
+      
+        </div>
+      
+      
+        <button class="clean">limpar</button>
+      
+      </div>
+      
+      
+      <div class="container">
+        <% roupasProduct.forEach(item=> { %>
+          <div class="produto">
+            <img src="<%= item.imagem[0] %>" alt="produto">
+            <p>
+              <%= item.nome %>
+            </p>
+            <p>
+              R$ <%= item.valor %>
+            </p>
+            <div>
+      
+              <a href="/detals/<%= item.id %>">
+                <button> Comprar </button>
+              </a>
+            </div>
+          </div>
+      
+      
+          <%})%>
+      
+      </div>
+
+    </div>    
+    
+
+
+
+
+    
+
+  </main>
+
+  <%- include('includes/footer') %>
+
+</body>
+
+
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<%- include('includes/head', { linkCss: 'css/detals.css' , title: 'Home page' }) %>
+
+ <% if (typeof usuario !== 'undefined') { %>
+            <%- include('includes/header' , {carrinhoProduts: carrinhoProdutos, usuario}) %>
+        <% } else { %>
+            <%- include('includes/header' , {carrinhoProduts: carrinhoProdutos}) %>
+        <% } %>
+    
+
+        <main>
+
+            <div class="box-1">
+              
+                <% if (typeof product.imagem_1 !== 'undefined') { %>
+                    <img id="img-0" src="<%= product.imagem_1 %>" alt="sd">
+                <% } %>
+
+                <% if (typeof product.imagem_2 !== 'undefined') { %>
+                    <img id="img-2" src="<%= product.imagem_2 %>" alt="sd">
+                <% } %>
+
+                <% if (typeof product.imagem_3 !== 'undefined') { %>
+                    <img id="img-3" src="<%= product.imagem_3 %>" alt="sd">
+                <% } %>
+                   
+            </div>
+
+           
+            <div class="box-2">
+
+
+                <img id="imagem-produto" src="<%= product.imagem_1 %>">
+
+
+            </div>
+
+            <div class="box-3">
+                <h1 id="nome-produto">
+                    <%= product.nome %>
+                </h1>
+                <h3 id="cor-produto">
+                    <%= product.cor %>
+                </h3>
+                <p id="valor-produto" class="preco"><strong> R$ <%= product.valor %></strong> </p>
+                <p id="valor-parcelado">ou em 3x de R$ <%= product.valor/ 3 %>
+                </p>
+
+                <ul>
+                    <li>material usado</li>
+                    <li>tipo simples</li>
+                    <li>feito no brasil</li>
+                </ul>
+
+                <div class="tamanhos-produto">
+
+                        <button class="button-quantidade">
+                            -tamanhos-
+                        </button>
+                </div>
+
+              
+
+                <div class="adicionar-comprar">
+                    <div class="adicionar-item">
+                        <button id="botao-mais">+</button>
+
+                        <p id="quantidade">1</p>
+                        <button id="botao-menos" disabled="true">-</button>
+
+                    </div>
+
+                    <div  class="button-comprar">
+                       <a href="/"> teste</a>
+                        <button id="button-comprar"> </button>  
+                       
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                
+                window.onload = () => {
+
+                    
+
+                    let quantidade = document.getElementById("quantidade");
+                    var estoque = 1
+
+                    function action(operation) {
+                        if (operation === "+") {
+                            estoque++
+                            quantidade.innerHTML = estoque
+                            if (estoque > 1) {
+                                subtrairQuantidade.disabled = false;
+                            }
+                        }
+                        else {
+                            estoque--
+                            quantidade.innerHTML = estoque
+                            if (estoque == 1) {
+                                document.getElementById("botao-menos").disabled = true;
+                            }
+
+                        }
+                    }
+
+                    let adicionarQuantidade = document.getElementById('botao-mais');
+                    let subtrairQuantidade = document.getElementById('botao-menos')
+
+
+                    adicionarQuantidade.addEventListener('click', () => action("+"))
+                    subtrairQuantidade.addEventListener('click', () => action())
+
+
+                    let imagem1 = document.getElementById('img-0');
+                    let imagem2 = document.getElementById('img-1');
+                    let imagem3 = document.getElementById('img-2');
+                    let imagemPrincipal = document.getElementById('imagem-produto');
+
+                    const imgArray = [imagem1, imagem2, imagem3]
+
+                    imgArray.forEach((img) => {
+                        img.addEventListener('click', () => {
+                            imagemPrincipal.src = img.src
+                        })
+
+                    })
+
+                   
+               
+
+
+                   
+                   
+                    
+                    
+                }
+
+                // var produto = <%- JSON.stringify(product)%>
+                // var carrinho = <%- JSON.stringify(carrinhoProdutos)%>
+
+                function pushCarrinho(){
+                   
+                    carrinho.push(produto)
+                    console.log(carrinho)
+                    
+                   }
+                
+
+            </script>
+
+        </main>
+        <%- include('includes/footer') %>
+</html>

@@ -1,0 +1,144 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+.main{
+        justify-content: space-between;
+        display: flex;
+        margin-top: 6rem;    
+} 
+
+ul a{
+    color: black;
+}
+
+i{
+    color: black;
+}
+
+.filter{
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+    letter-spacing: 1px;
+    height: 60%;
+
+}
+
+.filter p{
+    margin-bottom: 1rem;
+    font-size:1rem; 
+    letter-spacing: 1px;
+    text-align: center;
+    font-family:Montserrat, sans-serif;
+}
+
+.input2{
+    margin: 10px;
+    text-align: center;
+    flex-direction: column;
+}
+
+.input-tamanho{
+    display: flex;
+    margin: 6px;
+    text-align: center;
+    gap:8px;
+}
+.input2 input:hover{
+    background-color: #b4b0b0;
+    transition: all 0.5s;
+    cursor: pointer;
+    opacity: 0.4;
+
+}
+.limpar{
+    font-family:Montserrat, sans-serif;
+    font-size: .9rem;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-top: 15px;
+    border: none;
+    background-color: #30b3db;
+    border-radius: 4px;
+    color: white;
+    padding: 4px;
+}
+
+.container-1{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    gap: 12px;
+    height: auto;
+    padding-right: 7rem;
+    margin-left: 15rem;
+}
+
+.destaque-2{    
+    min-height: 300px;
+    width: 32%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.produtos div img {
+width: 90%;
+height: 70%;
+padding: 1rem;
+}
+
+.comprar-adicionar {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 14px;
+}
+
+.destaque-2 button {
+border: none;
+font-family: Montserrat, sans-serif;
+cursor: pointer;
+background-color: #30b3db;
+border-radius: 4px;
+color: white;
+padding: 4px;
+ letter-spacing: 1px;
+}
+
+.destaque-2 img:hover {
+    -webkit-transform: scale(1.0);
+    transform: scale(1.1);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+@media (max-width: 600px){
+    
+    .produtos{
+        width: 100%;
+        flex-direction: column;
+        margin-left: 7rem;          
+    }
+     
+     .c.destaque2{
+         flex-wrap: wrap;
+    }
+     
+     .img-produto{
+         height: auto;
+    }
+     
+     .produtos div img{
+        width: 50vw;
+    }
+
+     .main{
+        flex-direction: row;
+        
+    }
+}

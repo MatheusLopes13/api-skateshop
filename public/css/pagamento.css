@@ -1,0 +1,56 @@
+.titulo {
+    text-align: center;
+    margin-top: 10rem;
+    letter-spacing: 10px;
+    font-size: 30px;
+}
+
+.pai {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 3rem;
+}
+
+.forma-pagamento {
+    letter-spacing: 5px;
+    font-size:20px;
+    margin-bottom: 2.2rem;
+    
+}
+
+
+    
+.blocos input {
+    border: none;
+    border-bottom: 2px solid black;
+    width: 100%;
+    padding: 7px;
+    font-size: 17px;
+    margin-bottom: 15px;
+
+    
+}
+
+.blocos {
+    width: 30%;
+    
+}
+    
+button {
+    border: none;
+    border-bottom: 2px solid black;
+    width: 10rem;
+    padding: 7px;
+    font-size: 17px;
+    margin-top: 3rem;
+    color: white;
+    background-color: #202899;
+    float: right;
+    margin-right: 2rem;
+    
+}
+
+.mensagem{
+    display: none;
+    color: red;
+}

@@ -1,0 +1,289 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+}
+
+header i{
+    color: black;
+}
+
+.iniciais{
+    width: 2.2rem;
+    height: 2.2rem;
+    color: #fff;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.margin-0{
+    margin: 0;
+}
+
+.buttonSearch {
+    border:none;
+    background-color: transparent;
+}
+
+
+header ul a{
+    color: black;
+    text-decoration: none;
+
+}
+
+::-webkit-scrollbar{
+	width: .5rem;
+	background-color:transparent;
+}
+::-webkit-scrollbar-thumb{
+	border-radius: 3px;
+    background-color: gray;
+}
+footer{
+    display: flex;
+    width: 100%;
+    height: 12rem;
+    justify-content:space-around;
+    background-color:black;
+    margin-top: 7rem;
+    padding: 2rem;
+    }
+
+.footer-contato{
+    color: rgb(255, 242, 242);
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-imagens{
+    width: 4rem;
+    height: 2rem;
+}
+
+.footer-imagem1{
+    width: 2rem;
+    height: 2rem;
+}
+
+.picture{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+header {
+    width: 100%;
+    height: 5rem;
+    background-color: #d9d9d9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* box-shadow: 5px 5px 15px gray; */
+    list-style-type: none;
+    position: fixed;
+    top: 0;
+    z-index: 1
+}
+
+.aviao-img {
+    width: 8rem;
+}
+
+.aviao-img:hover {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.3);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.destaque:hover {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+header ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    font-family: Montserrat, sans-serif;
+}
+
+.font-padrao {
+    font-family: Montserrat, sans-serif;
+    color: #D9D9D9  ;
+}
+
+
+
+
+
+.menu-1 {
+    min-width: 30%;
+    margin-top: 1rem;
+
+}
+
+.menu-2 {
+    height: 80%;
+}
+
+.menu-3 {
+    min-width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.input-pesquisar {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    border-bottom: 1px solid black;
+    border-radius: 0;
+    width: 85%;  
+    height: 7%;
+ 
+}
+
+
+
+.box-contatos {
+    min-width: 43%;
+}
+
+.box-pagamentos {
+    width: 30%;
+    border-left: 1px solid rgb(245, 243, 243);
+    border-radius: 10px;
+    padding-left: 1rem;
+    justify-content: space-between;  
+}
+
+.pesquisar {
+    background-color: white;
+    padding: 6px 10px;
+    width: auto;
+    border-radius: 20px;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+  }
+
+.margin-contatos {
+    min-width: 23rem;
+}
+
+.margin-box-pagamentos {
+margin-top: 1rem;
+display: flex;
+gap: 2rem;
+}
+
+.espaco-contatos {
+    display: flex;
+    margin-top: 1rem;
+    color: #D9D9D9;
+}
+
+.alinhamento-contatos {
+    display: flex;
+    align-items: center;
+}
+
+.align-contato {
+    margin-left: 13rem;
+}
+
+.produto{
+    display: flex;
+}
+
+@media(max-width:600px){
+
+    .footer-contato{
+        flex-wrap: wrap;
+    }
+
+    .box-pagamentos{
+        flex-wrap: wrap;
+        width: 100%;
+        background-color: black;
+        padding-left: 9rem;   
+        margin-top: 2rem;
+        padding-left: 30%;
+    }
+
+    footer{
+        display: flex;
+        flex-wrap: wrap;
+        height: auto; 
+    }
+
+    .espaco-contatos{
+        flex-wrap: wrap;         
+    }
+
+    .dropdown{
+
+        display:block;
+        margin-bottom: 2.5rem;
+        
+                       
+    }
+
+    .btn-secondary, .btn:hover{
+        background-color: #D9D9D9;
+        color: black;
+        border:none;
+        position: fixed;
+        
+                
+    }
+
+    .menu-1{
+        display: none;
+    }
+
+    .pesquisar{
+        display: none;
+    }
+
+    .aviao-img{
+        margin-left: 6rem;
+    }
+
+    
+}
+
+.user-logado{
+    border-radius: 50%;
+    height: 2.2rem;
+    width: 2.2rem;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iniciais{
+    color: white;
+    font-weight: bold
+}
+
+.dropdown-toggle::after{
+    content: none !important;
+
+}
+
+
+.dropdown-item:hover{
+scale: none;
+}

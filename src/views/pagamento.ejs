@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('includes/head', { linkCss: 'css/pagamento.css' , title: 'Pagamento' }) %>
+<body>
+
+    <%- include('includes/header') %>
+
+    <main>
+        <div>
+            <h1 class="titulo">PAGAMENTO</h1>
+
+            <div class="pai">
+                <div class="blocos">
+                    <p class="forma-pagamento">Dados do cartão</p>
+                   
+                        <input type="text" placeholder="Informe o número do cartão" id="cartao">
+                        <p class="mensagem" id="aviso-pagamento">Por favor preencha os dados do cartão</p>
+                        <input type="text" placeholder="Validade(MM/AA)" id="validade">
+                        <p class="mensagem" id="aviso-validade">Por favor preencha os dados de validade do seu cartão</p>
+                        <input type="text" placeholder="CVV" id="seguranca">    
+                        <p class="mensagem" id="aviso-seguranca">Por favor preencha os dados do SVV</p>
+                </div>
+                <div class="blocos">
+                    <p class="forma-pagamento">Endereço de entrega</p>
+                 <input type="text" placeholder="Digite seu CEP" id="cep" onblur="capturaInput()" maxlength="8">
+                 <p class="mensagem" id="aviso-cep">Por favor preencha seu CEP</p>
+                 <input type="text" placeholder="Digite seu endereço" id="endereco">
+                 <p class="mensagem" id="aviso-endereco">Por favor informe seu endereço</p>
+                 <input type="text" placeholder="N.º" id="numero">
+                 <p class="mensagem" id="aviso-numero">Por favor preencha o numero da sua residência</p>
+                 <input type="text" placeholder="Ponto de refêrencia" id="referencia">
+                 <p class="mensagem" id="aviso-referencia">Por favor forneça um ponto de refêrencia</p>
+                
+                </div>
+                 
+                    
+            </div>
+            <button onclick="pagar()">
+                Realizar Compra    
+            </button>
+
+        </div>
+    </main>
+    <%- include('includes/footer') %>
+
+    </body>
+
+
+</html>

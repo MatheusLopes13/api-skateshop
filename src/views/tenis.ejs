@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<%- include('includes/head', { linkCss: 'css/tenis.css' , title: 'Tenis' }) %>
+
+<body> 
+    
+ <%- include('includes/header' , {carrinhoProduts: carrinhoProdutos}) %>
+ 
+ <main>
+
+<div class="main"> 
+
+    <div class="filter">
+        <p>FILTRO</p>
+        <p>Tamanhos</p>
+
+        <div class="input2">
+            <label class="input-tamanho">
+                <input type="checkbox">35
+            </label>
+
+            <label class="input-tamanho">
+                <input type="checkbox">36
+            </label>
+
+            <label class="input-tamanho">
+                <input type="checkbox">37
+            </label>
+
+            <label class="input-tamanho">
+                <input type="checkbox">38
+            </label>
+
+            <label class="input-tamanho">
+                <input type="checkbox">39
+            </label>
+
+            <label class="input-tamanho">
+                <input type="checkbox">40
+            </label>
+
+            <label class="input-tamanho">
+                <input type="checkbox">41
+            </label>
+
+            <label class="input-tamanho">
+                <input type="checkbox">42 
+            </label>
+
+            <label class="input-tamanho">
+                <input type="checkbox">43
+            </label>
+
+            <label class="input-tamanho">
+                <input type="checkbox">44 
+            </label>
+
+            <button class="limpar">Limpar</button>
+
+        </div>
+
+    </div>
+
+    <div class="container-1">
+        <% tenisProduct.forEach(item => { %>
+
+            <div class="destaque-2">
+                <img src="<%= item.imagem[0] %>" alt="produto">
+                <p>
+                    <%= item.nome %>
+                </p>
+                <p>
+                    R$ <%= item.valor %>
+                </p>
+            <div>
+
+                    <a href="">
+                        <button> Comprar </button>
+                    </a>
+                </div>
+                
+            </div>
+
+            <%})%>
+            
+    </main>
+            
+            <%- include('includes/footer') %>     
+
+</body>
+
+
+</html>

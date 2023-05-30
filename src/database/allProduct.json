@@ -1,0 +1,73 @@
+[
+    {
+        "id": 1,
+        "imagem": ["https://maze.cdn.plataformaneo.com.br/produto/multifotos/hd/20201209172622_3377996623_DZ.jpg", "https://www.estilozzo.com/wp-content/uploads/2020/12/S220_Numeric_NM1010BR_30_001.jpg", "https://i0.wp.com/sneakersbr.co/wp-content/uploads/2020/05/new-balance-numeric-101-tiago-lemos-02.jpg?resize=1080%2C1080&ssl=1"
+        ],
+        "nome": "tiago",
+        "valor": 600,
+        "cor": "preto",
+        "tamanhos": [38,39,40,42]
+    },
+    {
+        "id": 2,
+        "imagem": ["https://img.youcom.com.br/Custom/Content/Products/10/95/1095505_calca-sarja-cargo-joaquim-100369032_l2_637775741748402569.jpg","https://images.tcdn.com.br/img/img_prod/735068/calca_cargo_koloni_verde_escuro_2809_1_40eccc4a646da422b87768ea11d59f5c.jpeg", "https://77622.cdn.simplo7.net/static/77622/sku/mais-vendido-calca-cargo-reta-brothers-verde-militar-1676039621605.png"],
+        "nome": "Calça Chino",
+        "valor": 450,
+        "cor": "verde",
+        "tamanhos": [38,40,42]
+      
+    },
+    {
+        "id": 3,
+        "imagem": ["https://slowskateshop.com.br/wp-content/uploads/2022/02/CORD-SHIRT-CEDAR-1.jpg", "https://slowskateshop.com.br/wp-content/uploads/2022/07/CAMISA-ANC-VELUDO-LAGOA-1.jpg", "https://slowskateshop.com.br/wp-content/uploads/2022/02/CORD-SHIRT-CEDAR-1.jpg"],
+        "nome": "Polar shirt",
+        "valor": 300,
+        "cor": "marrom",
+        "tamanhos": ["p", "m", "gg"]
+    },
+    {
+        "id": 4,
+        "imagem": ["https://img.elo7.com.br/product/original/36F76BB/camiseta-masculina-basica-nelville-streetwear-algodao-100.jpg", "https://cf.shopee.com.br/file/71ad80f1c46275424f2f84cbe421537c","https://cea.vtexassets.com/arquivos/ids/50869596/Camiseta-Masculina-com-Amarracao-Manga-Curta-Gola-V-Preta-9968468-Preto_2.jpg?v=637703434355700000"],
+        "nome": "Camisa Simples",
+        "valor": 150,
+        "cor": "azul",
+        "tamanhos": ["m","gg"]
+    },
+    {
+        "id": 5,
+        "imagem": ["https://maze.cdn.plataformaneo.com.br/produto/multifotos/hd/20201209172622_3377996623_DZ.jpg", "https://www.estilozzo.com/wp-content/uploads/2020/12/S220_Numeric_NM1010BR_30_001.jpg", "https://i0.wp.com/sneakersbr.co/wp-content/uploads/2020/05/new-balance-numeric-101-tiago-lemos-02.jpg?resize=1080%2C1080&ssl=1"
+    ],
+        "nome": "Tiago lemos",
+        "valor": 600,
+        "cor": "preto",
+        "tamanhos": [38,39,40,42]
+    },
+    {
+        "id": 6,
+        "imagem": ["https://img.youcom.com.br/Custom/Content/Products/10/95/1095505_calca-sarja-cargo-joaquim-100369032_l2_637775741748402569.jpg","https://images.tcdn.com.br/img/img_prod/735068/calca_cargo_koloni_verde_escuro_2809_1_40eccc4a646da422b87768ea11d59f5c.jpeg", "https://77622.cdn.simplo7.net/static/77622/sku/mais-vendido-calca-cargo-reta-brothers-verde-militar-1676039621605.png"],
+        "nome": "Calça Chino",
+        "valor": 450,
+        "cor": "verde",
+        "tamanhos": [38,40,42]
+      
+    },
+    {
+        "id": 7,
+        "imagem": ["https://slowskateshop.com.br/wp-content/uploads/2022/02/CORD-SHIRT-CEDAR-1.jpg", "https://slowskateshop.com.br/wp-content/uploads/2022/07/CAMISA-ANC-VELUDO-LAGOA-1.jpg", "https://slowskateshop.com.br/wp-content/uploads/2022/02/CORD-SHIRT-CEDAR-1.jpg"],
+        "nome": "Polar shirt",
+        "valor": 300,
+        "cor": "marrom",
+        "tamanhos": ["p", "m", "gg"]
+    },
+    {
+        "id": 8,
+        "imagem": ["https://img.elo7.com.br/product/original/36F76BB/camiseta-masculina-basica-nelville-streetwear-algodao-100.jpg", "https://cf.shopee.com.br/file/71ad80f1c46275424f2f84cbe421537c","https://cea.vtexassets.com/arquivos/ids/50869596/Camiseta-Masculina-com-Amarracao-Manga-Curta-Gola-V-Preta-9968468-Preto_2.jpg?v=637703434355700000"],
+        "nome": "Polar shirt",
+        "valor": 150,
+        "cor": "azul",
+        "tamanhos": ["m","gg"]
+    }
+
+]
+
+

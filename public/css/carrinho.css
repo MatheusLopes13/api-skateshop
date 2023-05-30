@@ -1,0 +1,122 @@
+main { 
+    padding: 2rem;
+
+}
+
+ul a {
+    color:black;
+}
+.i-delete {
+    margin-left: 2rem;
+    color: red;
+}
+
+i{
+    color: black;
+}
+
+.meu-carrinho {
+    text-align: center;
+    font-size: 3rem;
+    letter-spacing: 1rem;
+    
+}
+
+.box {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 3rem;
+    margin-top: 4rem;
+    font-size: 2rem;
+    letter-spacing: 1rem;
+    
+}
+
+.produto-carrinho {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+    padding: 2rem;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+img {
+    width: 10rem;
+    height: 10rem;
+    
+}
+
+.valor-produto {
+    display: flex;
+}
+
+
+.tamanho-font {
+    font-size: 1rem;
+}
+
+div.valor-produto p {
+    font-size: 15px;
+    margin-right: 1rem;
+}
+
+.subtotal {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3rem;
+}
+
+.frete {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3rem;
+    margin: 2rem 0;
+}
+
+.total {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid black;
+    padding: 3rem;
+}
+
+.button-finalizar {
+    width: 10rem;
+    height: 2rem;
+    background-color: #202899;
+    border: none;
+    border-radius: 4px;
+    color: white;
+}
+
+.button-finalizar:hover{
+    background-color: #000983;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.display-flex {
+    display: flex;
+    gap: 3rem;
+    justify-content: space-between;
+
+}
+
+.container {
+    width: 100%;
+    
+}
+
+.margin-left {
+margin-left: 2rem;
+}
+
+.titulo {
+    width: 100%;
+}
