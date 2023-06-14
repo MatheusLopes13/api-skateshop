@@ -36,7 +36,7 @@ router.post('/product',
 
 // router.get('/pagamento', pagamentoController.pagamentoPage)
 // router.get('/roupas', roupasController.roupasPage)
-// router.post('/logar', loginController.logarUsuario)
+ router.post('/login', loginController.logarUsuario)
 // router.get('/perfil', perfilController.renderizarTelaPerfil)
 // router.post('/editar/perfil', perfilController.editarPerfil)
 // router.post('/criarconta',
