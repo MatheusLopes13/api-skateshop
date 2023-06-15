@@ -1,8 +1,6 @@
 // eu criei meu objeto Login que tem um atributo e esse atributo é uma função
 
 const { validationResult } = require('express-validator');
-const allProducts = require('../database/allProduct.json')
-const carrinhoProdutos = require('../database/carrinhoProdutos.json');
 const jwt = require('jsonwebtoken')
 const {User} = require('../models')
 
@@ -22,12 +20,12 @@ const loginController = {
                 res.send({msg: 'Email já em uso.'})
             }
 
-            else if (data.senha !== data.confirmarsenha ){
+            else if (data.senha !== data.confirma ){
                 res.send( {errors: [{ msg: 'Senhas não coincidem.' }]})
             }
 
             data.administrador = 0
-            delete data.confirmarsenha
+            delete data.confirma
 
             const newUser = await User.create(data);
             res.send({sucess: [{msg: 'Usuario ' + newUser.nome + ' criado com sucesso'}]})
