@@ -2,21 +2,23 @@ const express = require('express')
 const router = express.Router()
 const { body } = require('express-validator')
 const detalsController = require('../controllers/detalsController')
-const teniscontroller = require('../controllers/tenisController')
 const homeController = require('../controllers/homeController')
 const adminController = require('../controllers/adminController');
 const loginController = require('../controllers/loginController')
 const pagamentoController = require('../controllers/pagamentoController')
-const roupasController = require('../controllers/roupasControler')
 const perfilController = require('../controllers/perfilController')
+
+const auth = require('../middlewares/auth')
 
 
 // Rotas ja em padrão REST
-router.get('/',  homeController.home)
+router.get('/products',  homeController.home)
 router.get('/detals/:id', detalsController.getProduct)
-router.delete('/admin/delete/:id', adminController.deleteProduct)
-router.put('/update/:id', adminController.updateProduct)
-router.post('/product',
+router.delete('/admin/delete/:id', auth, adminController.deleteProduct)
+router.put('/update/:id', auth,  adminController.updateProduct)
+router.post('/login',  loginController.logarUsuario)
+router.get('/admin', adminController.renderizarAdminPage)
+router.post('/product', auth,
 //     body('nome').notEmpty().withMessage('Marca precisa ser preenchido!'),
 //     body('valor').notEmpty().withMessage('Valor precisa ser preenchido!'),
 //     body('tamanho').notEmpty().withMessage('Tamanho precisa ser preenchido!'),
@@ -29,14 +31,8 @@ router.post('/product',
 
 
 
-
 router.get('/search', homeController.search)
-router.get('/tenis', teniscontroller.tenis)
-router.get('/admin', adminController.renderizarAdminPage)
-router.get('/login', loginController.renderizarTelaLogin) 
 router.get('/pagamento', pagamentoController.pagamentoPage)
-router.get('/roupas', roupasController.roupasPage)
-router.post('/logar', loginController.logarUsuario)
 router.get('/perfil', perfilController.renderizarTelaPerfil)
 router.post('/editar/perfil', perfilController.editarPerfil)
 router.post('/criarconta',
@@ -49,10 +45,6 @@ body('numero').notEmpty().withMessage('Número precisa ser preenchido!'),
 body('senha').notEmpty().withMessage('Senha precisa ser preenchido!'),
 body('confirmarSenha').isEmpty().withMessage('Confirmar senha precisa ser preenchido!'),
 loginController.cadastrarUsuario)
-router.get('/sair', loginController.deslogarUsuario)
-
-// router.get('/edit/:id', adminController.updateEjs)
-
 
 
 module.exports = router

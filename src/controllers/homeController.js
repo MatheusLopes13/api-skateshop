@@ -1,8 +1,5 @@
 
-// const allProducts = require('../database/allProduct.json')
-// const carrinhoProdutos = require('../database/carrinhoProdutos.json')
 const { Op } = require('sequelize')
-
 const {Product} = require('../models')
 
 const homeController = {

@@ -1,6 +1,4 @@
 
-const { validationResult } = require('express-validator');
-const carrinhoProdutos = require('../database/carrinhoProdutos.json')
 const { Product } = require('../models')
 
 
@@ -16,22 +14,8 @@ const adminController = {
     },
 
     addProduct: async (req, res) => {
-        // const errors = validationResult(req);
-        // if (!errors.isEmpty()) {
-        //     res.status(400).json({ errors })
-        // }
-
-
-        // else {
+     
             const product = req.body
-            // const getProduct = await Product.findOne({
-            //     where: { codigo_produto: product.codigo_produto }
-            // })
-
-            // if (getProduct) {
-            //     res.send('PRODUTO JÁ CADASTRADO')
-            // }
-            // else {
 
                 try {
                     await Product.create(product)
@@ -40,16 +24,13 @@ const adminController = {
                     res.status(400).json({ error })
                     
                 }
-            // }
 
         }
-
-    // }
     ,
 
     deleteProduct: async (req, res) => {
         const { id } = req.params
-
+       
         const getProduct = await Product.findOne({ where: { id: id } })
 
         if (getProduct !== null) {
@@ -66,26 +47,9 @@ const adminController = {
 
     },
 
-    // updateEjs: async (req, res) => {
-    //     const { id } = req.params
-    //     const productToEdit = await Product.findByPk(id)
-
-    //     if(productToEdit){
-    //         try {
-    //             res.status(200).json(productToEdit)
-    //         } catch (error) {
-    //             res.status(400).json({ error })
-    //         }
-    //     }
-    //     else{
-    //         res.status(400).json('produto não existe')
-    //     }
-        
-    // },
-
     updateProduct: async (req, res) => {
         const { id } = req.params
-
+        
         try {
             const productToEdit = await Product.findByPk(id)
 
@@ -107,7 +71,6 @@ const adminController = {
             res.status(400).json({ error })
         }
     }
-
 
 }
 

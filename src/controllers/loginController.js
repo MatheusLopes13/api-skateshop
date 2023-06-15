@@ -3,6 +3,7 @@
 const { validationResult } = require('express-validator');
 const allProducts = require('../database/allProduct.json')
 const carrinhoProdutos = require('../database/carrinhoProdutos.json');
+const jwt = require('jsonwebtoken')
 const {User} = require('../models')
 
 const loginController = {
@@ -48,7 +49,7 @@ const loginController = {
             const senha = req.body.senha
             // aqui estou tentando encontrar alguem que tenha o mesmo email e senha digitados na pg de login
             const usuario = await User.findOne({ where: { email: email, senha: senha } })
-            console.log('>>>>>',usuario)
+          
             // se caso o usuario nao for cadastrado 
             if(usuario === null) {
                 res.send( { errors: [{ msg:'Usuario não encontrado' }] })
@@ -58,8 +59,11 @@ const loginController = {
                 iniciais += userLogged.nome.substring(0, 1)
                 iniciais += userLogged.sobrenome.substring(0, 1)
                 userLogged.iniciais = iniciais
-                console.log('usuario>>>', usuario.dataValues);
-                res.send({ userLogged });
+                // console.log('usuario>>>', usuario.dataValues);
+
+                const token = jwt.sign({ id: usuario.id , email: usuario.email , iat: Math.floor(Date.now / 1000 ) - 30  }, 'segredo',{ expiresIn: '30m'})
+               
+                res.send({  token }); 
 
             }
         }
