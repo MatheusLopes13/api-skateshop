@@ -34,7 +34,7 @@ body('numero').notEmpty().withMessage('Número precisa ser preenchido!'),
 body('senha').notEmpty().withMessage('Senha precisa ser preenchido!'),
 body('confirma').isEmpty().withMessage('Confirmar senha precisa ser preenchido!'),
 loginController.cadastrarUsuario)
-
+router.get('/usuario/:id', loginController.buscarUsuarioPorId)
 
 module.exports = router
  

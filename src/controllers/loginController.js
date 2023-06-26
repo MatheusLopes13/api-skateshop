@@ -39,7 +39,7 @@ const loginController = {
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
             console.log(errors.mapped())
-            res.send({ errors: errors.array() })
+            throw new Error({errors: errors.array() })
         } else {
 
             //req.body é onde o front me envia infos, aqui eu recebo email e senha enviado pelo usuario
@@ -50,15 +50,9 @@ const loginController = {
           
             // se caso o usuario nao for cadastrado 
             if(usuario === null) {
-                res.send( { errors: [{ msg:'Usuario não encontrado' }] })
+                res.status(400).send({ error: 'Usuario não encontrado' })
             } else {
-                const userLogged = usuario.dataValues
-                let iniciais = ''
-                iniciais += userLogged.nome.substring(0, 1)
-                iniciais += userLogged.sobrenome.substring(0, 1)
-                userLogged.iniciais = iniciais
-                // console.log('usuario>>>', usuario.dataValues);
-
+               
                 const token = jwt.sign({ id: usuario.id , email: usuario.email , iat: Math.floor(Date.now / 1000 ) - 30  }, 'segredo',{ expiresIn: '30m'})
                
                 res.send({  token }); 
@@ -67,6 +61,28 @@ const loginController = {
         }
 
         
+    },
+
+    buscarUsuarioPorId: async (req, res) => {
+        const { id } = req.params;
+        
+        const usuarioLogado = await User.findOne({ where: { id: id } })
+        
+        if(usuarioLogado && usuarioLogado.dataValues){
+            const userLogged = usuarioLogado.dataValues
+            let iniciais = ''
+            iniciais += userLogged.nome.substring(0, 1)
+            iniciais += userLogged.sobrenome.substring(0, 1)
+            userLogged.iniciais = iniciais
+            delete userLogged.senha
+            res.status(200).send({ user: userLogged })
+        } else {
+            res.status(200).send({ user: null })
+        }
+        
+
+
+
     }
 } 
 // aqui eu to exportando o meu objeto
